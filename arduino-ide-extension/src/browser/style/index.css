@@ -19,6 +19,7 @@
 @import "./custom-codicon.css";
 @import "./progress-bar.css";
 @import "./settings-step-input.css";
+@import "./myln-tactical-theme.css";
 
 :root {
     --arduino-button-height: 28px;

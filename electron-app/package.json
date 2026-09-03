@@ -59,7 +59,7 @@
     "target": "electron",
     "frontend": {
       "config": {
-        "applicationName": "Arduino IDE",
+        "applicationName": "MYLN Tactical Studio",
         "defaultTheme": {
           "light": "arduino-theme",
           "dark": "arduino-theme-dark"
@@ -68,11 +68,11 @@
         "validatePreferencesSchema": false,
         "electron": {
           "showWindowEarly": true,
-          "uriScheme": "arduino-ide"
+          "uriScheme": "myln-studio"
         },
         "reloadOnReconnect": true,
         "preferences": {
-          "window.title": "${rootName}${activeEditorShort}${appName}",
+          "window.title": "[PRJ_MYLN] ${rootName}${activeEditorShort}${appName}",
           "files.autoSave": "afterDelay",
           "editor.minimap.enabled": false,
           "editor.tabSize": 2,
@@ -92,7 +92,7 @@
     },
     "backend": {
       "config": {
-        "configDirName": ".arduinoIDE",
+        "configDirName": ".mylnStudio",
         "singleInstance": true
       }
     },
@@ -102,11 +102,11 @@
       }
     }
   },
-  "author": "Arduino SA",
-  "description": "Arduino IDE",
+  "author": "PRJ_MYLN Tactical Engineering Team",
+  "description": "PRJ_MYLN Tactical Studio & Multi-Board IDE",
   "build": {
-    "appId": "cc.arduino.IDE2",
-    "productName": "Arduino IDE",
+    "appId": "cc.prj.myln.studio",
+    "productName": "MYLN Tactical Studio",
     "asar": false,
     "detectUpdateChannel": false,
     "generateUpdatesFilesForAllChannels": true,

@@ -73,6 +73,8 @@ import {
 } from '../common/protocol/config-service';
 import { MonitorWidget } from './serial/monitor/monitor-widget';
 import { MonitorViewContribution } from './serial/monitor/monitor-view-contribution';
+import { MylnTacticalHudWidget } from './myln-tactical-hud/myln-tactical-hud-widget';
+import { MylnTacticalHudContribution } from './myln-tactical-hud/myln-tactical-hud-contribution';
 import { TabBarDecoratorService as TheiaTabBarDecoratorService } from '@theia/core/lib/browser/shell/tab-bar-decorator';
 import { TabBarDecoratorService } from './theia/core/tab-bar-decorator';
 import { ProblemManager as TheiaProblemManager } from '@theia/markers/lib/browser';
@@ -1070,4 +1072,13 @@ export default new ContainerModule((bind, unbind, isBound, rebind) => {
   // Hides the Test Explorer from the side-bar
   bind(TestViewContribution).toSelf().inSingletonScope();
   rebind(TheiaTestViewContribution).toService(TestViewContribution);
+
+  // PRJ_MYLN Tactical HUD Side-Panel Extension
+  bindViewContribution(bind, MylnTacticalHudContribution);
+  bind(FrontendApplicationContribution).toService(MylnTacticalHudContribution);
+  bind(MylnTacticalHudWidget).toSelf();
+  bind(WidgetFactory).toDynamicValue((ctx) => ({
+    id: MylnTacticalHudWidget.ID,
+    createWidget: () => ctx.container.get<MylnTacticalHudWidget>(MylnTacticalHudWidget),
+  })).inSingletonScope();
 });

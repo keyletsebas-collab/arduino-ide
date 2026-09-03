@@ -1,0 +1,47 @@
+/**
+ * @file myln-tactical-theme.css
+ * @brief High-contrast dark theme for PRJ_MYLN Tactical Rescue Terminals
+ */
+
+:root {
+  --myln-bg-deep: #050811;
+  --myln-bg-surface: #0a0e17;
+  --myln-bg-card: #0f172a;
+  --myln-border-subtle: #1e293b;
+  --myln-border-focus: #00f0ff;
+  --myln-text-primary: #f8fafc;
+  --myln-text-secondary: #94a3b8;
+  --myln-accent-cyan: #00f0ff;
+  --myln-accent-emerald: #10b981;
+  --myln-accent-amber: #f59e0b;
+  --myln-accent-rose: #ef4444;
+}
+
+.theia-layout-panel {
+  background-color: var(--myln-bg-deep) !important;
+}
+
+.myln-tactical-hud-container {
+  background-color: var(--myln-bg-deep);
+  color: var(--myln-text-primary);
+  font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+}
+
+.myln-tactical-card {
+  background-color: var(--myln-bg-card);
+  border: 1px solid var(--myln-border-subtle);
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 10px;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.myln-tactical-card:hover {
+  border-color: var(--myln-border-focus);
+}
+
+.myln-tactical-header {
+  color: var(--myln-accent-cyan);
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}

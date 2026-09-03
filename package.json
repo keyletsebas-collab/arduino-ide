@@ -1,9 +1,9 @@
 {
-  "name": "arduino-ide",
+  "name": "myln-tactical-studio",
   "version": "2.3.11",
-  "description": "Arduino IDE",
-  "repository": "https://github.com/arduino/arduino-ide.git",
-  "author": "Arduino SA",
+  "description": "PRJ_MYLN Tactical Studio & Mission Control IDE",
+  "repository": "https://github.com/PRJ_MYLN/myln-tactical-studio.git",
+  "author": "PRJ_MYLN Tactical Engineering Team",
   "license": "AGPL-3.0-or-later",
   "private": true,
   "engines": {
